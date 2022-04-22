@@ -2,6 +2,7 @@ import { Sub } from './sub.js';
 import mapTest from './map';
 import { array } from './array.js'
 import { object as obj, Object2 } from './object'
+import { promiseMethod, promiseVar, promiseChain, proAsync, asyncTest, addImage } from './promise'
 
 let sub = new Sub('カルピス', 100);
 sub.checkMethod();
@@ -21,3 +22,12 @@ let obj2 = new Object2();
 obj2.getTitle();
 console.log(obj);
 console.log(obj2);
+
+promiseMethod();
+console.log(promiseVar);
+// promiseChain();
+// console.log(proAsync());
+
+console.log(asyncTest());
+
+addImage();
