@@ -1,5 +1,5 @@
 'use strict';
-export { promiseMethod, promiseVar, promiseChain, proAsync, asyncTest, addImage };
+export { promiseMethod, promiseVar, promiseChain, proAsync, asyncTest, addImage, buttonClick };
 
 let promiseMethod = function () {
   console.log('--promise----------------------------------------');
@@ -81,13 +81,20 @@ async function fetchMethod() {
 }
 
 function addImage() {
-  const img = fetchMethod()
+  fetchMethod()
     .then(data => {
       const dogImgElement = document.getElementById('dogimgid');
       dogImgElement.src = data;
-    }
-    )
+    })
     .catch(e => {
       console.log(e);
     })
+}
+
+function buttonClick() {
+  const buttonElement = document.getElementById('buttonid');
+  buttonElement.addEventListener('click', () => {
+    console.log('ボタンクリック')
+    addImage();
+  })
 }
