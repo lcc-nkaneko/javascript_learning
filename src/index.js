@@ -3,6 +3,7 @@ import mapTest from './map';
 import { array } from './array.js'
 import { object as obj, Object2 } from './object'
 import { promiseMethod, promiseVar, promiseChain, proAsync, asyncTest, addImage, buttonClick } from './promise'
+import './css/style.css';
 
 let sub = new Sub('カルピス', 100);
 sub.checkMethod();

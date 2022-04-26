@@ -9,6 +9,14 @@ module.exports = {
     publicPath: '/dist/', //bundleしたjsファイルの出力先の相対pathを指定（htmlファイルを基準）
     filename: 'bundle.js'
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        use: ['style-loader', 'css-loader']
+      }
+    ]
+  },
   devServer: {
     port: 8081,
     hot: true,
